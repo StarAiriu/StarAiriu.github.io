@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <style>
     .contact-icons ion-icon {
@@ -44,7 +45,7 @@
 
 
 </style>
-<body style="background-color: #FEFAE0;">
+<body style="background-color: #F8FFD2;">
 
 
     <nav>
@@ -62,35 +63,31 @@
         </ul>
     </nav>
 
-    <script>
-        function changeBackgroundColor() {
-            document.querySelector('nav').style.backgroundColor = '#B99470';
-        }
-    </script>
+
 
     <section id="home">
         <img src="WellSPhire Banner.jpg"/>
         <div class="kolom">
             <h2>WELLSPHIRE</h2>
-            <p>Adalah web yang membantu dalam bidang kesehatan dibuat oleh Raka Hikmatullah Kusumah, berdasarkan tantangan pribadi dalam menjalani gaya hidup sehat.
+            <p>Web yang membantu dalam bidang kesehatan dibuat oleh Raka Hikmatullah Kusumah, berdasarkan tantangan pribadi dalam menjalani gaya hidup sehat.
                 Mengalami kesulitan dalam melacak asupan kalori dan menentukan apakah tubuhnya berada dalam rentang ideal atau cenderung kegemukan, Raka mengembangkan 
                 sebuah situs web untuk mengatasi permasalahan tersebut. Platform ini mencakup fitur-fitur seperti kalkulator BMI interaktif dan pelacak kalori untuk 
                 memudahkan pemantauan nutrisi yang efisien. Untuk meningkatkan pengalaman pengguna, Raka menyertakan panel berita kesehatan untuk memberikan 
                 pembaruan terkini di bidang tersebut. Selain itu, menyadari pentingnya dukungan komunitas dalam perjalanan kesehatan, situs web ini juga 
                 memiliki komunitas Discord khusus agar pengguna dapat terlibat dalam diskusi terkait kesehatan dan berbagi pengalaman. Melalui proyek ini, 
-                dengan adanya platform ini memberikan rasa kebersamaan bagi individu yang berjuang untuk gaya hidup lebih sehat.</p>
+                dengan adanya platform WellSPhire memberikan rasa kebersamaan bagi individu yang berjuang untuk gaya hidup lebih sehat.</p>
         </div>
     </section>
 
-    <h2 class="fitur">FITUR-FITUR WELLSPHIRE</h2>
+    <h2 class="fitur">PENJELASAN FITUR-FITUR WELLSPHIRE</h2>
 
     <div class="fitur-container">
-        <div class="fitur-box">
+        <div class="fitur-box" data-aos="fade-right" data-aos-duration="1500">
             <img src="Berita.png" alt="Fitur 1" class="gambar-fitur">
         </div>
         <div class="penjelasan-fitur">
             <h3>Panel Berita</h3>
-            <p>Dengan Panel Berita Kesehatan, saya memberikan akses cepat dan terkini ke informasi kesehatan terbaru. Dapatkan berita-berita terkini tentang perkembangan medis, penelitian kesehatan terkini, tips gaya hidup sehat, dan informasi terbaru seputar penyakit. saya ingin membantu orang lain tetap up-to-date agar pengguna dapat membuat keputusan yang lebih baik untuk kesehatan.</p>
+            <p>Dengan Panel Berita Kesehatan, Raka memberikan akses cepat dan terkini ke informasi kesehatan terbaru. Dapatkan berita-berita terkini tentang perkembangan medis, penelitian kesehatan terkini, tips gaya hidup sehat, dan informasi terbaru seputar penyakit. Raka ingin membantu orang lain tetap up-to-date agar pengguna dapat membuat keputusan yang lebih baik untuk kesehatan.</p>
         </div>
     </div>
 
@@ -99,31 +96,33 @@
             <h3>Penghitung IMT dan Lemak</h3>
             <p>Pahami kesehatan tubuh Anda dengan menggunakan Penghitung IMT ini. Fitur ini memberikan informasi tentang indeks massa tubuh Anda berdasarkan berat dan tinggi badan. Dengan pemahaman yang lebih baik tentang IMT, Anda dapat mengambil langkah-langkah untuk mencapai atau mempertahankan berat badan yang sehat. Ini adalah Fitur yang berguna untuk merencanakan program kebugaran dan nutrisi yang sesuai dengan kebutuhan unik tubuh Anda.</p>
         </div>
-        <div class="fitur-box">
+        <div class="fitur-box" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="100">
             <img src="Hitung IMT.jpg" alt="Fitur 2" class="gambar-fitur">
         </div>
     </div>
 
     <div class="fitur-container">
-        <div class="fitur-box">
+        <div class="fitur-box" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="200">
             <img src="Hitung Kalori Makanan.jpg" alt="Fitur 3" class="gambar-fitur">
         </div>
         <div class="penjelasan-fitur">
             <h3>Penghitung Kalori Makanan</h3>
-            <p>Kendalikan asupan kalori Anda dengan mudah menggunakan Penghitung Kalori Makanan kami. Cukup masukkan makanan atau minuman yang Anda konsumsi, dan alat ini akan memberikan perkiraan jumlah kalori serta informasi gizi yang lebih rinci. Dengan pemahaman yang lebih baik tentang asupan kalori, Anda dapat merencanakan makanan sehat dan mencapai tujuan berat badan Anda. Alat ini juga dapat membantu Anda menyusun rencana makanan yang seimbang dan sesuai dengan kebutuhan nutrisi harian Anda.
+            <p>Kendalikan asupan kalori Anda dengan mudah menggunakan Penghitung Kalori Makanan WellSPhire. Cukup masukkan makanan atau minuman yang Anda konsumsi, dan alat ini akan memberikan perkiraan jumlah kalori serta informasi gizi yang lebih rinci. Dengan pemahaman yang lebih baik tentang asupan kalori, Anda dapat merencanakan makanan sehat dan mencapai tujuan berat badan Anda. Alat ini juga dapat membantu Anda menyusun rencana makanan yang seimbang dan sesuai dengan kebutuhan nutrisi harian Anda.
                 <strong>Perlu di ingat untuk menggunakan fitur ini harus menggunakan lowercase dan tanpa spasi</strong>
             </p>
         </div>
     </div>
 
-    <div class="profile-container">
+    <div class="profile-container" data-aos="fade-up" data-aos-duration="1000">
         <img src="YEARBOOK MM LAST GEN! (PERSONAL) (79 of 184).jpg" alt="Your Face" class="profile-image">
+        <h3>Raka Hikmatullah Kusumah<br>Mahasiswa IT PENS 2023</h3>
         <div class="contact">
             <div class="contact-icons">
                 <ion-icon name="logo-instagram"></ion-icon>
                 <ion-icon name="call"></ion-icon>
                 <ion-icon name="mail"></ion-icon>
             </div>
+            
             <div class="contact-info">
                 <a href="https://www.instagram.com/star_airiu/" target="_blank">star_airiu</a>
                 <p>081394459158</p>
@@ -133,7 +132,7 @@
     </div>
     <h2 class="portofolio">MY PORTOFOLIO</h2>
     <div class="portofolio-container">
-        <div class="portofolio-box">
+        <div class="portofolio-box" data-aos="fade-up-left" data-aos-duration="1500">
             <img src="lembar 2 photo makanan deisy.jpg" alt="portofolio 1" class="gambar-portofolio">
             <div class="penjelasan-portofolio">
                 <h3>Desain Grafis</h3>
@@ -141,7 +140,7 @@
             </div>
         </div>
 
-        <div class="portofolio-box">
+        <div class="portofolio-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
             <video controls class="video-portofolio">
                 <source src="The Last Gen MM.mp4">
             </video>
@@ -151,7 +150,7 @@
             </div>
         </div>
 
-        <div class="portofolio-box">
+        <div class="portofolio-box" data-aos="fade-up-right" data-aos-duration="1500" data-aos-delay="400">
             <img src="WhatsApp Image 2023-11-23 at 23.47.21.jpeg" alt="portofolio 3" class="gambar-portofolio">
             <div class="penjelasan-portofolio">
                 <h3>3D Project</h3>
@@ -163,4 +162,10 @@
     <a href="https://drive.google.com/drive/folders/1c6eA8lnLGePhlRhCxv5SF5sety8uInsB?usp=drive_link" target="_blank">
         <h2>CLICK DISINI</h2>
     </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
 </html>
