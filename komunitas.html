@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellSphire</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            background-color: #FEFAE0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            margin: 20px;
+            text-align: justify; /* Teks diatur menjadi rata kiri-kanan */
+        }
+
+        header {
+            text-align: center;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .discord-logo {
+            width: 50px;
+            height: auto;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto; /* Pusatkan logo Discord */
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        .discord-icon {
+            font-size: 50px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbtn" onclick="changeBackgroundColor()">
+            <ion-icon name="list-outline"></ion-icon>
+        </label>
+        <label class="Logo">WellSphire</label>
+        <ul>
+            <li><a href="WELLSPHIRE.html">Tentang</a></li>
+            <li><a href="Berita.html">Berita</a></li>
+            <li><a href="IMT.html">Kalkulator IMT</a></li>
+            <li><a href="Kalori.html">Menghitung Kalori</a></li>
+            <li><a href="komunitas.html">Komunitas</a></li>
+        </ul>
+    </nav>
+    <script>
+        function changeBackgroundColor() {
+            document.querySelector('nav').style.backgroundColor = '#B99470';
+        }
+    </script>
+    <div class="content">
+        <header>
+            <h1>Komunitas WellSphire</h1>
+            <img src="WellSPhire Banner.jpg" alt="Header Image" class="header-image">
+        </header>
+    <p>Komunitas WellSphire adalah tempat di mana para pengguna dan pecinta kesehatan berkumpul untuk berbagi pengetahuan, pengalaman, dan motivasi dalam mencapai gaya hidup sehat. Komunitas ini menjadi wadah untuk saling mendukung, bertukar ide, dan memotivasi satu sama lain dalam perjalanan menuju kesehatan yang lebih baik.</br></br></p>
+    <p>Discord adalah platform komunikasi berbasis teks dan suara yang memungkinkan anggota komunitas WellSphire berinteraksi secara real-time. Mengapa Discord? Karena Discord menyediakan ruang obrolan, saluran suara, dan berbagai fitur interaktif yang memudahkan kolaborasi dan berbagi informasi.</br></p>
+    <p>Discord memungkinkan Anda membuat saluran khusus untuk berbagai topik atau keperluan tertentu. Ini membantu menjaga organisasi dan memfasilitasi diskusi yang terfokus.Discord memiliki dukungan untuk bot yang dapat membantu mengelola komunitas Anda. Bots dapat memberikan fitur otomatis, pengelolaan moderator, atau bahkan hiburan untuk meningkatkan pengalaman anggota.</br></p>
+    <p>Discord dapat digunakan secara gratis dengan sebagian besar fitur yang dapat diakses tanpa biaya. Ini membuatnya mudah diadopsi oleh komunitas yang baru dibentuk atau yang masih dalam tahap pertumbuhan.
+
+        Dengan kombinasi fitur-fitur tersebut, Discord menjadi platform yang serbaguna untuk membentuk dan menjalankan komunitas, baik itu untuk tujuan profesional, hobi, atau pengembangan sosial.</br></br></p>
+    <footer>
+        <p>Silahkan klik icon berikut untuk bergabung dengan komunitas Discord</p>
+        <a href="https://discord.gg/ewdtQXb4ZZ" target="_blank"><ion-icon name="logo-discord" class="discord-icon"></ion-icon></a>
+    </footer>
+
+    <script>
+        function changeBackgroundColor() {
+            document.querySelector('nav').style.backgroundColor = '#B99470';
+        }
+    </script>
+</body>
+
+</html>

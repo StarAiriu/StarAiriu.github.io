@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellSphire</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Tambahkan gaya CSS di sini sesuai kebutuhan responsif */
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #B99470;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #5F6F52;
+        }
+
+        #imtResult, #fatPercentageResult {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body style="background-color: #FEFAE0;">
+    <div class="overlay"></div>
+
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbtn" onclick="changeBackgroundColor()">
+            <ion-icon name="list-outline"></ion-icon>
+        </label>
+        <label class="Logo">WellSphire</label>
+        <ul>
+            <li><a href="WELLSPHIRE.html">Tentang</a></li>
+            <li><a href="Berita.html">Berita</a></li>
+            <li><a href="IMT.html">Kalkulator IMT</a></li>
+            <li><a href="Kalori.html">Menghitung Kalori</a></li>
+            <li><a href="komunitas.html">Komunitas</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function changeBackgroundColor() {
+            document.querySelector('nav').style.backgroundColor = '#B99470';
+        }
+    </script>
+
+    <div class="content">
+        <h2>Hitung IMT dan Persentase Lemak</h2>
+        <form id="imtCalculator">
+            <label for="height">Tinggi Badan (cm):</label>
+            <input type="number" id="height" name="height" required><br>
+            <label for="weight">Berat Badan (kg):</label>
+            <input type="number" id="weight" name="weight" required><br>
+            <label for="age">Usia:</label>
+            <input type="number" id="age" name="age" required><br>
+            <label for="gender">Jenis Kelamin:</label>
+            <select id="gender" name="gender" required>
+                <option value="female">Wanita</option>
+                <option value="male">Pria</option>
+            < </select><br><br>
+            <button type="button" onclick="calculateIMTAndFatPercentage()">Hitung IMT dan Persentase Lemak</button>
+            <button type="reset" onclick="resetForm()">Reset</button>
+        </form>
+        <p id="imtResult">IMT Anda adalah: </p>
+        <p id="fatPercentageResult"></p>
+    </div>
+    
+    <script>
+    function calculateIMTAndFatPercentage() {
+        // Kode perhitungan IMT dan persentase lemak sama seperti sebelumnya
+    }
+    
+    function resetForm() {
+        document.getElementById("imtCalculator").reset();
+        document.getElementById("imtResult").innerHTML = "IMT Anda adalah: ";
+        document.getElementById("fatPercentageResult").innerHTML = "";
+    }
+    </script>
+
+    <script>
+        function calculateIMTAndFatPercentage() {
+            var height = parseFloat(document.getElementById("height").value);
+            var weight = parseFloat(document.getElementById("weight").value);
+            var age = parseFloat(document.getElementById("age").value);
+            var gender = document.getElementById("gender").value;
+            var imtResult = document.getElementById("imtResult");
+            var fatPercentageResult = document.getElementById("fatPercentageResult");
+
+            var imt = (weight / ((height / 100) * (height / 100))).toFixed(2);
+
+            var fatPercentage = 0;
+            if (gender === "female") {
+                fatPercentage = (1.20 * imt) + (0.23 * age) - 5.4;
+            } else if (gender === "male") {
+                fatPercentage = (1.20 * imt) + (0.23 * age) - 10.8 - 5.4;
+            }
+
+            imtResult.innerHTML = "IMT Anda adalah: " + imt;
+            fatPercentageResult.innerHTML = "Persentase Lemak: " + fatPercentage.toFixed(2) + "%";
+
+            // Menambahkan keterangan berdasarkan hasil IMT untuk populasi Asia
+            var resultDescription = "";
+            if (imt >= 30) {
+                resultDescription = "Sepertinya kamu mengalami obesitas. Saran saya, mulai rutin berolahraga dan menjaga pola makan dari sekarang.";
+            } else if (imt >= 25) {
+                resultDescription = "IMT Anda berada pada kategori kelebihan berat badan. Pertahankan dengan olahraga rutin dan makan teratur.";
+            } else if (imt >= 18.5) {
+                resultDescription = "IMT Anda normal atau berat badan ideal. Pertahankan dengan gaya hidup sehat.";
+            } else {
+                resultDescription = "IMT Anda di bawah normal. Sebaiknya Anda menambah pola makan Anda.";
+            }
+
+            // Menampilkan keterangan hasil IMT
+            var resultDescriptionElement = document.createElement("p");
+            resultDescriptionElement.textContent = resultDescription;
+            fatPercentageResult.appendChild(resultDescriptionElement);
+        }
+    </script>
+</body>
+</html>

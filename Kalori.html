@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellSphire</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body {
+            background-color: #FEFAE0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            margin: 20px;
+            text-align: center;
+        }
+
+        #calorieCalculator {
+            background-color: #FEFAE0;
+            padding: 20px;
+            border: 1px solid #B99470;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input {
+            margin: 10px 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        button {
+            background-color: #B99470;
+            color: #FEFAE0;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8E735B;
+        }
+
+        #calorieResult {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #8E735B;
+            text-align: left;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbtn" onclick="changeBackgroundColor()">
+            <ion-icon name="list-outline"></ion-icon>
+        </label>
+        <label class="Logo">WellSphire</label>
+        <ul>
+            <li><a href="WELLSPHIRE.html">Tentang</a></li>
+            <li><a href="Berita.html">Berita</a></li>
+            <li><a href="IMT.html">Kalkulator IMT</a></li>
+            <li><a href="Kalori.html">Menghitung Kalori</a></li>
+            <li><a href="komunitas.html">Komunitas</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Hitung Kalori Makanan</h2>
+        <form id="calorieCalculator">
+            <label for="food">Jenis Makanan:</label>
+            <input type="text" id="food" name="food" required><br>
+            <label for="quantity">Jumlah (buah):</label>
+            <input type="number" id="quantity" name="quantity" required><br>
+            <button type="button" onclick="calculateCalories()">Hitung Kalori</button>
+            <button type="button" onclick="resetForm()">Reset</button>
+        </form>
+        <p id="calorieResult">Hasil perhitungan kalori akan ditampilkan di sini.</p>
+        <p class="note">Catatan:<br>*Penulisan harus huruf kecil<br>*Ganti spasi dengan ( _ )</p>
+    </div>
+
+    <script>
+        function calculateCalories() {
+            var foodName = document.getElementById("food").value.toLowerCase();
+            var quantity = parseFloat(document.getElementById("quantity").value);
+            var calorieResult = document.getElementById("calorieResult");
+
+            var calorieDatabase = {
+                // Masukkan data kalori makanan di sini
+                "nasi_putih": 175,
+                "nasi_merah": 110,
+                "tempe": 34,
+                "nasi_putih": 175,
+                "kentang_rebus": 87,
+                "ubi_jalar": 86,
+                "singkong": 160,
+                "roti_putih": 66,
+                "roti_gandum": 67,
+                "mi_goreng_instan": 350,
+                "dada_ayam": 190,
+                "dada_ayam_goreng_(dengan_kulit)": 216,
+                "dada_ayam_goreng_(tanpa_kulit)": 184,
+                "bebek_goreng": 286,
+                "ikan_kembung": 167,
+                "ikan_lele_goreng": 105,
+                "ikan_salmon_panggang": 171,
+                "udang_goreng_tepung": 150,
+                "bakso_sapi": 202,
+                "chicken_nugget": 297,
+                "telur_orak_arik": 199,
+                "telur_rebus": 68,
+                "telur_dadar": 93,
+                "telur_ceplok": 92,
+                "tempe_goreng": 118,
+                "tempe_bacem": 157,
+                "tahu_bacem": 119,
+                "tahu_isi": 124,
+                "tahu_bakso": 119,
+                "tahu_sumedang": 113,
+                "tumis_labu_siam": 106,
+                "tumis_kangkung": 155,
+                "tumis_kacang_panjang_dan_tempe": 102,
+                "sambal_goreng_kentang": 107,
+                "perkedel_kentang": 117,
+                "apel": 72,
+                "pisang": 105,
+                "jambu_biji": 37,
+                "jambu_air": 55,
+                "semangka": 30,
+                "melon": 34,
+                "alpukat": 322,
+                "anggur": 69,
+                "jeruk": 62,
+                "salak": 8,
+                "manggis": 73,
+                "mangga_manalagi": 72,
+                "buah_naga": 50,
+                "pepaya": 39,
+                // ...
+            };
+
+            if (foodName in calorieDatabase) {
+                var caloriePer100g = calorieDatabase[foodName];
+                var totalCalories = (caloriePer100g / 100) * quantity;
+                calorieResult.innerHTML = "Makanan " + foodName + " sebanyak " + quantity + " buah memiliki " + totalCalories + " kalori.";
+            } else {
+                calorieResult.innerHTML = "Maaf, data kalori makanan tidak ditemukan.";
+            }
+        }
+
+        function resetForm() {
+            document.getElementById("calorieCalculator").reset();
+            document.getElementById("calorieResult").innerHTML = "Hasil perhitungan kalori akan ditampilkan di sini.";
+        }
+    </script>
+
+</body>
+</html>

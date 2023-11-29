@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellSphire</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <style>
+        body{
+            font-family: Verdana;
+            background-color: #FEFAE0;
+        }
+        .berita-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .berita-box {
+            width: 30%; /* Lebar masing-masing kotak berita */
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .berita-box:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .gambar-berita {
+            width: 100%;
+            height: 200px; /* Tinggi gambar berita */
+            object-fit: cover;
+        }
+
+        .ringkasan-berita {
+            padding: 10px;
+        }
+
+        .baca-link {
+            display: block;
+            padding: 10px;
+            text-align: center;
+            background-color: #5F6F52;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .baca-link:hover {
+            background-color: #A9B388;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbtn" onclick="changeBackgroundColor()">
+            <ion-icon name="list-outline"></ion-icon>
+        </label>
+        <label class="Logo">WellSphire</label>
+        <ul>
+            <li><a href="WELLSPHIRE.html">Tentang</a></li>
+            <li><a href="Berita.html">Berita</a></li>
+            <li><a href="IMT.html">Kalkulator IMT</a></li>
+            <li><a href="Kalori.html">Menghitung Kalori</a></li>
+            <li><a href="komunitas.html">Komunitas</a></li>
+        </ul>
+    </nav>
+    <div class="berita-container">
+        <div class="berita-box">
+            <img src="tips-membuat-bekal-sekolah-anak.jpg" alt="Berita 1" class="gambar-berita">
+            <div class="ringkasan-berita">
+                <h3>Mulai buat bekal dengan gizi seimbang</h3>
+                <p>Setiap harinya, tubuh membutuhkan asupan protein nabati 2-3 porsi, protein hewani 2-3 porsi, makanan pokok 3-8 porsi, sayuran 3-5 porsi, buah 3-5 porsi dan minum air putih minimal 8 gelas. PGS juga menekankan pentingnya minum air putih setiap hari. Lantas, apa saja sih nutrisi yang termasuk Pedoman Gizi Seimbang?</p>
+                <a href="#" class="baca-link">Baca</a>
+            </div>
+        </div>
+
+        <div class="berita-box">
+            <img src="Cari-Dokter-Umum-Terbaik-di-Yogyakarta_-Ini-5-Rekomendasinya.jpg" alt="Berita 2" class="gambar-berita">
+            <div class="ringkasan-berita">
+                <h3>Sehari Cuma Makan Dua Kali, Apakah Tubuh Jadi Rentan Sakit Dok?</h3>
+                <p>Penyakit yang dapat timbul juga berhubungan dengan akibat yang timbul dari kekurangan nutrisi secara kronis. Imunitas yang menurun menyebabkan seseorang akan rentan terhadap penyakit infeksi dan juga akan lebih sulit untuk sembuh apabila terkena infeksi.</p>
+                <a href="#" class="baca-link">Baca</a>
+            </div>
+        </div>
+
+        <div class="berita-box">
+            <img src="jeruk.jpeg" alt="Berita 3" class="gambar-berita">
+            <div class="ringkasan-berita">
+                <h3>Inilah manfaat mengkonsumsi jeruk!</h3>
+                <p>Nutrisi jeruk juga berasal dari mineral seperti potasium dan fosfor sebagai zat yang mampu mencegah penyakit kronis. Selain itu jeruk memberikan beberapa manfaat kesehatan lain, misal melindungi dari kanker dan hidrasi.</p>
+                <a href="#" class="baca-link">Baca</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

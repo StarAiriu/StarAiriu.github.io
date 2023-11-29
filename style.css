@@ -1,0 +1,267 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+body {
+    font-family: Verdana;
+    margin: 0;
+    overflow-x: hidden; 
+    color: #5F6F52;
+}
+h2 {
+    text-align: center;
+    margin-top: 2em; /* Menggunakan unit em untuk keberlanjutan pada perubahan tampilan */
+    margin-bottom: 2.5em;
+}
+
+.kolom {
+    margin-left: 5em; 
+    margin-right: 5em; 
+    text-align: justify;
+}
+
+img {
+    max-width: 100%; 
+}
+
+@media (max-width: 600px) {
+    h2 {
+        margin-top: 1em;
+        margin-bottom: 1.5em;
+    }
+
+    .kolom {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+}
+
+nav {
+    background: #B99470;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+label.Logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    display: block;
+    transition: color 0.5s;
+    white-space: nowrap;
+}
+
+a.active, a:hover {
+    background: #A9B388;
+    transition: .5s;
+    color: #5F6F52;
+    border-radius: 20px;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#checkbox {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    label.Logo {
+        font-size: 30px;
+        padding-left: 20px;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: #5F6F52;
+    }
+
+    nav ul li {
+        display: block;
+        line-height: 30px;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    .checkbtn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    #checkbox:checked ~ ul {
+        display: flex;
+    }
+
+    nav ul li a:hover {
+        background: none;
+        color: #B99470;
+        border-radius: 0;
+    }
+}
+
+.fitur-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px;
+}
+
+.fitur-box {
+    width: 45%; /* Lebar masing-masing kotak fitur */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.fitur-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gambar-fitur {
+    width: 100%;
+    height: auto;
+}
+
+.penjelasan-fitur {
+    padding: 20px;
+    width: 50%; /* Lebar masing-masing kotak penjelasan */
+}
+
+@media (max-width: 768px) {
+    .fitur-container {
+        flex-direction: column;
+    }
+
+    .fitur-box,
+    .penjelasan-fitur {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+.profile-container {
+    position: relative;
+    text-align: center;
+    margin-top: 250px;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.contact {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-icons ion-icon {
+    font-size: 30px;
+    color: white;
+    margin: 0 10px;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.portfolio {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.portofolio-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.portofolio-box {
+    width: 30%; /* Lebar masing-masing kotak berita */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.portofolio-box:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-portofolio{
+    width: 100%;
+    height: auto; 
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.gambar-portofolio {
+    width: 100%;
+    height: 200px; /* Tinggi gambar berita */
+    object-fit: cover;
+}
+
+.penjelasan-portofolio {
+    padding: 10px;
+}
+
